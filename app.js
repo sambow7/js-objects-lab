@@ -1,4 +1,4 @@
-const pokemon = require('./data.js')
+//  const pokemon = require('./data.js');
 
 const game = {
   party: [],
@@ -19,9 +19,18 @@ const game = {
   ],
 }
 
-// console.log(game.items)
-
 // console.dir(pokemon, { maxArrayLength: null })
+
+// console.log("exercise 2", game);
+
+
+// console.log("gyms:", game.gyms);
+
+// console.log("party:",game.party);
+
+// console.log("items:",game.items);
+
+// console.log(pokemon);
 
 /*
 Exercise 3
@@ -32,4 +41,36 @@ Exercise 3
 Solve Exercise 3 here:
 */
 
+const gameDifficulty = ["Easy", "Medium", "Hard"]
 
+const difficultySelected = []
+game.difficulty = gameDifficulty[difficultySelected]
+
+console.log("difficulty",gameDifficulty);
+
+
+
+/*
+Exercise 4
+1. Select a starter Pokémon from the `pokemon` array. Remember, a starter Pokémon's `starter` property is true.
+2. Add this Pokémon to the `game.party` array. Which array method will you use to add them?
+
+
+Solve Exercise 4 here:
+*/
+
+// const pokemon = []
+
+pokemon.forEach((starterPokemon) => {
+  // console.log("forEach", starterPokemon); //* This "prints/logs" every pokemon
+  if (starterPokemon.starter ===  true) {    
+  console.log("starters",starterPokemon); //* This "prints/logs" true starter   
+  }
+});
+
+let starterPokemon = []
+
+starterPokemon.forEach((s) => {
+  console.log("start",s);
+  
+});
