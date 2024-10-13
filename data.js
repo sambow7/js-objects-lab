@@ -158,4 +158,4 @@ const pokemon = [
   { number: 151, name: "Mew", type: "psychic", hp: 100, starter: false },
 
 ]
-module.exports = pokemon
+// module.exports = pokemon
