@@ -46,7 +46,7 @@ const gameDifficulty = ["Easy", "Medium", "Hard"]
 const difficultySelected = []
 game.difficulty = gameDifficulty[difficultySelected]
 
-console.log("difficulty",gameDifficulty);
+// console.log("difficulty",gameDifficulty);
 
 
 
@@ -59,18 +59,34 @@ Exercise 4
 Solve Exercise 4 here:
 */
 
-// const pokemon = []
 
 pokemon.forEach((starterPokemon) => {
   // console.log("forEach", starterPokemon); //* This "prints/logs" every pokemon
   if (starterPokemon.starter ===  true) {    
-  console.log("starters",starterPokemon); //* This "prints/logs" true starter   
-  }
+  // console.log("starters:",starterPokemon); //* This "prints/logs" true starter   
+  };
+  if (starterPokemon.hp === 44 ) {
+    // console.log("hpStarter",starterPokemon); //*This "prints/log" true starter with a 44 hp 
+  };
+  game.party.push(starterPokemon);
 });
 
-let starterPokemon = []
+// console.log("party:",game.party[6]);
 
-starterPokemon.forEach((s) => {
-  console.log("start",s);
-  
+/*
+Exercise 5
+1. Choose three more Pokémon from the `pokemon` array and add them to your party.
+2. Consider different attributes like 'type' or 'HP' for your selection. Which array method will you use to add them?
+
+
+Solve Exercise 5 here:
+*/
+
+pokemon.forEach((threePokemon) => {
+  if (threePokemon.type === "poison") {
+    // console.log("Poison",threePokemon); //* all "poison" pokemon
+  } else if (threePokemon.hp === 30) {
+    console.log("HP",threePokemon); 
+  };   
 });
+
