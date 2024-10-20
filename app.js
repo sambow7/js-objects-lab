@@ -49,7 +49,6 @@ const starterArray = pokemon[pokemon.length - 151];
 // console.log("Poke Array:",pokemonArray);
 
 game.party.push(starterArray);
-// console.log(game.party);
 
 /*
 Exercise 5
@@ -62,7 +61,7 @@ Solve Exercise 5 here:
 pokemon.forEach((poisonPokemon) => {
   if (poisonPokemon.type === "poison" && poisonPokemon.hp > 80) {
     game.party.push(poisonPokemon);
-  }
+  };
 });
 // console.log("Exercise 5",game.party)
 
@@ -77,7 +76,7 @@ Solve Exercise 6 here:
 game.gyms.forEach((completeGym) => {
   if (completeGym.difficulty <= 3) {
     return completeGym.completed = true;
-  }
+  };
 });
 
 // console.log(game.gyms);
@@ -101,11 +100,11 @@ Solve Exercise 7 here:
 
 const starterIdx = game.party.indexOf(game.party.find(pokemon => pokemon.starter === true));
 
-const starterName = game.party[starterIdx].name
+const starterName = game.party[starterIdx].name;
 
-const currentStarter = pokemon.find(pokemon => pokemon.number === game.party[starterIdx].number)
+const currentStarter = pokemon.find(pokemon => pokemon.number === game.party[starterIdx].number);
 
-game.party.splice(starterIdx, 1, pokemon[currentStarter.number])
+game.party.splice(starterIdx, 1, pokemon[currentStarter.number]);
 // console.log(starterName, "===evolved into===>", game.party[starterIdx].name)
 
 // console.log("============== Game Party Results ==============", game.party)
@@ -134,9 +133,9 @@ Exercise 9
 Solve Exercise 9 here:
 */
 
-const starterPokemon = pokemon.filter(p => p.starter);
-starterPokemon.forEach(p =>
-  console.log("=========  Ex 9 True Starter  ========", p.name));
+const starterPokemon = pokemon.filter(pokemon => pokemon.starter);
+
+// console.log("======== Ex 9 True Starter Pokemon =======", starterPokemon);
 
 /*
 Exercise 10
@@ -150,12 +149,13 @@ After writing this method, call it and pass in a Pokemon object of your choice f
 Solve Exercise 10 here:
 */
 
-game.catchPokemon = function (pokemonObj) {   //this creates my function 
-  pokemon.forEach(() => {   //this goes thorough each poke to catch?
-  })
-}
-game.catchPokemon(pokemon[0]);   //this calls my function 
-// console.log(game, "New obj Catch Poke "); //this checks game array to confirm new obj
+game.catchPokemon = function (pokemonObj) {
+  // console.log("Poke Ball:", pokemonObj)
+};
+
+game.catchPokemon(pokemon[24]);
+
+// console.log("GAME.PARTY", game.party);
 
 /*
 Exercise 11
@@ -170,14 +170,14 @@ Also, log the `game.items` array to confirm that the pokeball quantity is being 
 Solve Exercise 11 here:
 */
 
+game.catchPokemon = function (pokemonObj) {
+  game.items[1].quantity -= 1;
+  game.party.push(pokemonObj);
+  // console.log("POKE BALL",pokemonObj)
+};
 
-// game.catchPokemon = function(pokemonObj) { 
-//   game.party.push(pokemon0bj);
-// game.items[1]. quantity -= 1
-// };
-
-// game.catchPokemon (pokemon [145]);
-// console.log( 'Exercise 11 result:', game.items);
+game.catchPokemon(pokemon[24]);
+// console.log('==================Exercise 11 GAEME ITEMS:=====================', game.items);
 
 /*
 Exercise 12
@@ -192,8 +192,6 @@ game.gyms.forEach((completeGym) => {
     return completeGym.completed = true;
   }
 });
-
-console.log("===========   Ex 12   ==============", game.gyms);
 
 /*
 Exercise 13
@@ -228,10 +226,7 @@ function gymStatus() {
       gymTally.incomplete++;
     }
   });
-
-  // console.log(gymTally);
 }
-//  game.gymStatus();
 
 /*
 Exercise 14
@@ -247,9 +242,7 @@ Solve Exercise 14 here:
 game.partyCount = function () {
   game.party.length;
 };
-
 game.partyCount();
-// console.log(game.party)
 
 /*
 Exercise 15
