@@ -136,7 +136,7 @@ Solve Exercise 9 here:
 
 const starterPokemon = pokemon.filter(p => p.starter);
 starterPokemon.forEach(p =>
-  console.log("=========Exercise 9 True Starter========", p.name));
+  console.log("=========  Ex 9 True Starter  ========", p.name));
 
 /*
 Exercise 10
@@ -150,13 +150,12 @@ After writing this method, call it and pass in a Pokemon object of your choice f
 Solve Exercise 10 here:
 */
 
-
-game.catchPokemon = function(pokemonObj) {
-  pokemon.forEach((element, index) => {
-    this.party.push(element)
+game.catchPokemon = function (pokemonObj) {   //this creates my function 
+  pokemon.forEach(() => {   //this goes thorough each poke to catch?
   })
 }
-console.log(game, "Catch Poke ")
+game.catchPokemon(pokemon[0]);   //this calls my function 
+// console.log(game, "New obj Catch Poke "); //this checks game array to confirm new obj
 
 /*
 Exercise 11
@@ -172,10 +171,106 @@ Solve Exercise 11 here:
 */
 
 
-game.catchPokemon = function(pokemonObj) { 
-  game.party.push(pokemon0bj);
-game.items[1]. quantity -= 1
+// game.catchPokemon = function(pokemonObj) { 
+//   game.party.push(pokemon0bj);
+// game.items[1]. quantity -= 1
+// };
+
+// game.catchPokemon (pokemon [145]);
+// console.log( 'Exercise 11 result:', game.items);
+
+/*
+Exercise 12
+1. Similar to Exercise 6, now complete gyms with a difficulty below 6. How will you approach this?
+ (change the value of `complete` in the qualifying objects from false to true).
+
+Solve Exercise 12 here:
+*/
+
+game.gyms.forEach((completeGym) => {
+  if (completeGym.difficulty <= 6) {
+    return completeGym.completed = true;
+  }
+});
+
+console.log("===========   Ex 12   ==============", game.gyms);
+
+/*
+Exercise 13
+1. Create a `gymStatus` method in `game` to tally completed and incomplete gyms.
+2. How will you iterate through the `gyms` array and update the tally? Remember to log the final tally.
+
+This method should:
+  - Not accept any arguments.
+  - Initially create a constant `gymTally`, which is an object that has two 
+    properties: `completed` and `incomplete`, both of which are initially set to 0.
+  - Iterate through the objects in the `game.gyms` array and update the 
+    properties on `gymTally` as follows: 
+    - `completed` should count how many gyms in the array have a value of `true` 
+      for their `completed` property. 
+    - `incomplete` should count how many gyms in the array have a value of 
+      `false` for their `completed` property.
+  - Log the value of `gymTally`.
+  - The method should not return anything.
+
+For example, if five gym objects have a value of `true` on their `completed` property and three gym objects have a value of `false` on their `completed` property, the logged value would be: `{ completed: 5, incomplete: 3 }`.
+
+Solve Exercise 13 here:
+*/
+
+function gymStatus() {
+  const gymTally = { completed: 0, incomplete: 0 };
+
+  game.gyms.forEach(gym => {
+    if (gym.completed) {
+      gymTally.completed++;
+    } else {
+      gymTally.incomplete++;
+    }
+  });
+
+  // console.log(gymTally);
+}
+//  game.gymStatus();
+
+/*
+Exercise 14
+1. Add a `partyCount` method to `game` that counts the number of Pokémon in your party.
+
+This method should:
+  - Not accept any arguments.
+  - Count the number of Pokemon in the party.
+  - return the found number of Pokemon in the party.
+
+Solve Exercise 14 here:
+*/
+game.partyCount = function () {
+  game.party.length;
 };
 
-game.catchPokemon (pokemon [145]);
-console.log( 'Exercise 11 result:', game.items);
+game.partyCount();
+// console.log(game.party)
+
+/*
+Exercise 15
+1. Now, complete gyms with a difficulty below 8. Reflect on how this is similar to or different from the previous gym exercises.
+(change the value of `complete` in the qualifying objects from false to true).
+
+Solve Exercise 15 here:
+*/
+
+game.gyms.forEach((completeGym) => {
+  if (completeGym.difficulty <= 8) {
+    return completeGym.completed = true;
+  }
+});
+
+/*
+Exercise 16
+1. Log the entire `game` object to the console. Take a moment to review the changes you've made throughout the exercises.
+
+
+Solve Exercise 16 here:
+*/
+
+console.log("============= Ex 16 Game Over ============", game)
