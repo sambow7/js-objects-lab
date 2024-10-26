@@ -31,11 +31,11 @@ Exercise 3
 Solve Exercise 3 here:
 */
 
-const gameDifficulty = ["Easy", "Med", "Hard"]
+const gameDifficulty = "Med";
 const difficultySelected = 1
 game.difficulty = gameDifficulty[difficultySelected]
 
-// console.log("Exercise 3", game);
+console.log("Exercise 3", game);
 
 /*
 Exercise 4
@@ -116,13 +116,13 @@ Exercise 8
 
 Solve Exercise 8 here:
 */
-let partyP = game.party;
+let partyPokemon = game.party;
 
 for (let i = 0; i < game.party.length; i++) {
   // console.log(game.party[i])
 }
 
-// console.log("================= Exercise 8 =============", partyP);
+console.log("================= Exercise 8 =============", partyPokemon);
 
 /*
 Exercise 9
@@ -226,7 +226,10 @@ function gymStatus() {
       gymTally.incomplete++;
     }
   });
+  return gymTally;
 }
+
+console.log(gymStatus(game.gyms));
 
 /*
 Exercise 14
@@ -241,8 +244,8 @@ Solve Exercise 14 here:
 */
 game.partyCount = function () {
   game.party.length;
+  return;
 };
-game.partyCount();
 
 /*
 Exercise 15
