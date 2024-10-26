@@ -45,8 +45,8 @@ Exercise 4
 Solve Exercise 4 here:
 */
 
-const starterArray = pokemon[pokemon.length - 151];
-// console.log("Poke Array:",pokemonArray);
+const starterArray = pokemon.find((pokemon) => pokemon.starter === true );
+console.log("Poke Array:",starterArray);
 
 game.party.push(starterArray);
 
@@ -218,7 +218,6 @@ Solve Exercise 13 here:
 
 function gymStatus() {
   const gymTally = { completed: 0, incomplete: 0 };
-
   game.gyms.forEach(gym => {
     if (gym.completed) {
       gymTally.completed++;
@@ -227,9 +226,9 @@ function gymStatus() {
     }
   });
   return gymTally;
-}
+};
 
-console.log(gymStatus(game.gyms));
+console.log("=========== Ex13 ===========",gymStatus(game.gyms));
 
 /*
 Exercise 14
