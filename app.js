@@ -98,13 +98,25 @@ More Hints: The existing starter Pokemon will be *replaced* in your party with t
 Solve Exercise 7 here:
 */
 
-const starterIdx = game.party.indexOf(game.party.find(pokemon => pokemon.starter === true));
+// const starterIdx = game.party.indexOf(game.party.find(pokemon => pokemon.starter));
 
-const starterName = game.party[starterIdx].name;
+const starter = game.party.find(pokemon => pokemon.starter);
+console.log("STARTER",starter)
+if (starter) {
+  let evolvedPokemon;
+  if (starter = game.party) evolvedPokemon = pokemon.find(p => p.number === number of pokemon's evolution change in list);
+  else if (logic for pokemon # 2 in list);
+ // etc..
+ if (evolvedPokemon) {
+      // Replace the starter with the evolved form in the party using .splice()
+  }
+}
 
-const currentStarter = pokemon.find(pokemon => pokemon.number === game.party[starterIdx].number);
+// const starterName = game.party[starterIdx].name;
 
-game.party.splice(starterIdx, 1, pokemon[currentStarter.number]);
+// const currentStarter = pokemon.find(pokemon => pokemon.number === game.party[starterIdx].number);
+
+// game.party.splice(starterIdx, 1, pokemon[currentStarter.number]);
 // console.log(starterName, "===evolved into===>", game.party[starterIdx].name)
 
 // console.log("============== Game Party Results ==============", game.party)
