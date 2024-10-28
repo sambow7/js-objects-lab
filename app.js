@@ -159,16 +159,14 @@ After writing this method, call it and pass in a Pokemon object of your choice f
 Solve Exercise 10 here:
 */
 
-game.catchPokemon = function (pokemonObj) {
-  console.log("game items", game.items);
-  game.items.push(pokemonObj)
-};
+game.catchPokemon = function(pokemonObj) {
+  game.party.push(pokemonObj);
+}
 
 
-game.catchPokemon(pokemon[24]);
+game.catchPokemon(pokemon[7])
+console.log("GAME PARTY",game.party);
 
-
-// console.log("GAME.PARTY", game.party);
 
 /*
 Exercise 11
@@ -186,11 +184,9 @@ Solve Exercise 11 here:
 game.catchPokemon = function (pokemonObj) {
   game.items[1].quantity -= 1;
   game.party.push(pokemonObj);
-  // console.log("POKE BALL",pokemonObj)
 };
 
-game.catchPokemon(pokemon[24]);
-// console.log('==================Exercise 11 GAEME ITEMS:=====================', game.items);
+game.catchPokemon(pokemon[25]);
 
 /*
 Exercise 12
