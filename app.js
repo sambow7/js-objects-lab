@@ -32,10 +32,10 @@ Solve Exercise 3 here:
 */
 
 const gameDifficulty = "Med";
-const difficultySelected = 1
+const difficultySelected = 1;
 game.difficulty = gameDifficulty[difficultySelected]
 
-console.log("Exercise 3", game);
+// console.log("Exercise 3", game);
 
 /*
 Exercise 4
@@ -45,8 +45,8 @@ Exercise 4
 Solve Exercise 4 here:
 */
 
-const starterArray = pokemon.find((pokemon) => pokemon.starter === true );
-console.log("Poke Array:",starterArray);
+const starterArray = pokemon.find((pokemon) => pokemon.starter === true);
+// console.log("Pokemon Array afetr Starter Find:", starterArray);
 
 game.party.push(starterArray);
 
@@ -97,29 +97,27 @@ More Hints: The existing starter Pokemon will be *replaced* in your party with t
 
 Solve Exercise 7 here:
 */
-
-// const starterIdx = game.party.indexOf(game.party.find(pokemon => pokemon.starter));
-
-const starter = game.party.find(pokemon => pokemon.starter);
-console.log("STARTER",starter)
+const starter = game.party.find(pokemon => pokemon.starter); //Using Array.protoype.find()
+console.log("STARTER",starter,"STARTERR")
 if (starter) {
   let evolvedPokemon;
-  if (starter = game.party) evolvedPokemon = pokemon.find(p => p.number === number of pokemon's evolution change in list);
-  else if (logic for pokemon # 2 in list);
- // etc..
- if (evolvedPokemon) {
-      // Replace the starter with the evolved form in the party using .splice()
+
+  if (starter.number === 1) { //Baulbasar 
+    evolvedPokemon = pokemon.find(p => p.number === 2); // Ivysaur
+  } else if (starter.number === 31) {
+    evolvedPokemon = pokemon.find(p => p.number === 32) //
+  } else if (starter.number === 34) {
+    evolvedPokemon = pokemon.find(p => p.number === 35)
+  } else if (starter.number === 89) {
+    evolvedPokemon = pokemon.find(p => p.number === 90)
   }
-}
-
-// const starterName = game.party[starterIdx].name;
-
-// const currentStarter = pokemon.find(pokemon => pokemon.number === game.party[starterIdx].number);
-
-// game.party.splice(starterIdx, 1, pokemon[currentStarter.number]);
-// console.log(starterName, "===evolved into===>", game.party[starterIdx].name)
-
-// console.log("============== Game Party Results ==============", game.party)
+  if (evolvedPokemon) {
+    const index = game.party.indexOf(starter);
+    if (index !== -1) {
+      game.party.splice(index, 1, evolvedPokemon);
+    }
+  }
+};
 
 /*
 Exercise 8
@@ -131,7 +129,7 @@ Solve Exercise 8 here:
 let partyPokemon = game.party;
 
 for (let i = 0; i < game.party.length; i++) {
-  // console.log(game.party[i])
+  console.log(game.party[i])
 }
 
 console.log("================= Exercise 8 =============", partyPokemon);
@@ -162,10 +160,13 @@ Solve Exercise 10 here:
 */
 
 game.catchPokemon = function (pokemonObj) {
-  // console.log("Poke Ball:", pokemonObj)
+  console.log("game items", game.items);
+  game.items.push(pokemonObj)
 };
 
+
 game.catchPokemon(pokemon[24]);
+
 
 // console.log("GAME.PARTY", game.party);
 
@@ -240,7 +241,7 @@ function gymStatus() {
   return gymTally;
 };
 
-console.log("=========== Ex13 ===========",gymStatus(game.gyms));
+console.log("=========== Ex13 ===========", gymStatus(game.gyms));
 
 /*
 Exercise 14
