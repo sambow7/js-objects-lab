@@ -31,11 +31,8 @@ Exercise 3
 Solve Exercise 3 here:
 */
 
-const gameDifficulty = "Med";
-const difficultySelected = 1;
-game.difficulty = gameDifficulty[difficultySelected]
+game.difficulty = "Med"
 
-// console.log("Exercise 3", game);
 
 /*
 Exercise 4
@@ -50,20 +47,12 @@ const starterArray = pokemon.find((pokemon) => pokemon.starter === true);
 
 game.party.push(starterArray);
 
-/*
-Exercise 5
-1. Choose three more Pokémon from the `pokemon` array and add them to your party.
-2. Consider different attributes like 'type' or 'HP' for your selection. Which array method will you use to add them?
-
-Solve Exercise 5 here:
-*/
 
 pokemon.forEach((poisonPokemon) => {
   if (poisonPokemon.type === "poison" && poisonPokemon.hp > 80) {
     game.party.push(poisonPokemon);
   };
 });
-// console.log("Exercise 5",game.party)
 
 /*
 Exercise 6
@@ -78,8 +67,6 @@ game.gyms.forEach((completeGym) => {
     return completeGym.completed = true;
   };
 });
-
-// console.log(game.gyms);
 
 /*
 Exercise 7
@@ -98,7 +85,7 @@ More Hints: The existing starter Pokemon will be *replaced* in your party with t
 Solve Exercise 7 here:
 */
 const starter = game.party.find(pokemon => pokemon.starter); //Using Array.protoype.find()
-console.log("STARTER",starter,"STARTERR")
+// console.log("STARTER",starter,"STARTER")
 if (starter) {
   let evolvedPokemon;
 
@@ -130,7 +117,7 @@ let partyPokemon = game.party;
 
 for (let i = 0; i < game.party.length; i++) {
   console.log(game.party[i])
-}
+};
 
 console.log("================= Exercise 8 =============", partyPokemon);
 
@@ -159,13 +146,13 @@ After writing this method, call it and pass in a Pokemon object of your choice f
 Solve Exercise 10 here:
 */
 
-game.catchPokemon = function(pokemonObj) {
+game.catchPokemon = function (pokemonObj) {
   game.party.push(pokemonObj);
 }
 
 
 game.catchPokemon(pokemon[7])
-console.log("GAME PARTY",game.party);
+console.log("GAME PARTY", game.party);
 
 
 /*
